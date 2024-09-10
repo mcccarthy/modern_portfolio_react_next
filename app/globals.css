@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 body {
+	background: #ffffff;
 }
-
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
+	}
+	.before-content-none::before {
+		content: '';
 	}
 }

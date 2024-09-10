@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Bricolage_Grotesque, Oswald } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import GrainEffect from '@/components/grain-effect';
 
 //Fonts
 const MainFont = Bricolage_Grotesque({
@@ -26,7 +27,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={cn(MainFont.className, OswaldFont.variable)}>{children}</body>
+			<body className={cn(MainFont.className, OswaldFont.variable)}>
+				<GrainEffect />
+				{children}
+			</body>
 		</html>
 	);
 }
